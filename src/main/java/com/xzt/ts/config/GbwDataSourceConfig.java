@@ -39,17 +39,11 @@ public class GbwDataSourceConfig {
         return DataSourceBuilder.create().build();
     }
 
-    @Resource
-    private MybatisPlusInterceptor mybatisPlusInterceptor;
 
     @Bean(name = factoryBeanName)
     public SqlSessionFactory dbSqlSessionFactory(@Qualifier(propertiesBeanName) DataSource dataSource) throws Exception {
         MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        Interceptor[] plugins = {mybatisPlusInterceptor};
-        // ！！！此处必须设置分页插件的bean，否则不会生效！！！！
-        bean.setPlugins(plugins);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(xmlLocationPath));
 //        MybatisConfiguration configuration = new MybatisConfiguration();
 //        configuration.setLogImpl(StdOutImpl.class);
 //        bean.setConfiguration(configuration);

@@ -87,8 +87,4 @@
         o_id, order_no, order_type, project_id, project_name, goods_id, goods_name, bus_code, insure_code, user_id, user_name, province_name, province_code, city_name, city_code, area_name, area_code, order_source, order_amount, insurance_amount, fee, fee_start, fee_end, limit_start, limit_end, insure_days, main_org_id, main_org_name, wf_id, input_flag, reject_flag, doc_flag, info_flag, cur_node_name, cur_node_code, pre_node_name, pre_node_code, step, pay_type, policy_url, guarantee_url, pay_url, policy_no, apply_no, apply_flag, remark, broker_name, broker_phone_no, op_name, op_id, json_other_org, pro_info_json, status, create_date, modify_date, tender_date, is_delete, rg_check, local_policy, local_guarantee, batch_no, surrender_status, policy_date, counter_guarantee, policy_holder_type, link_id, link_no, link_type, pre_order_no, tb_code, tb_name, bb_code, bb_name, special_clause, push_time, push_status
     </sql>
 
-    <select id="selectGood" resultType="com.cngongbao.basic.platfor">
-    SELECT oi.* from order_info oi, goods_info gi where oi.goods_id = gi.goods_id;
-    </>
-
 </mapper>

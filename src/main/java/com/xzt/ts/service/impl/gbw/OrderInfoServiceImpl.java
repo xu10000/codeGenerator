@@ -2,6 +2,7 @@ package com.xzt.ts.service.impl.gbw;
 
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.github.pagehelper.PageHelper;
 import com.xzt.ts.entity.gbw.OrderInfo;
 import com.xzt.ts.mapper.gbw.OrderInfoMapper;
 import com.xzt.ts.service.gbw.IOrderInfoService;
@@ -22,9 +23,9 @@ import java.util.List;
 public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo> implements IOrderInfoService {
 
     public String hello(String name) {
-        Page page = new Page<OrderInfo>(2,6);
-        List<OrderInfo> list = this.page(page).getRecords();
-//        List<OrderInfo> list = this.lambdaQuery().
+//这个一定要放在第一行,否则无法进行分页
+        PageHelper.startPage(1,10);
+        List<OrderInfo> list = this.list();
         return JSONUtil.toJsonStr(list);
     }
 
