@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xzt.ts.mapper.gbw.OrderInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xzt.ts.entity.gbw.OrderInfo">
+        <id column="o_id" property="oId" />
+        <result column="order_no" property="orderNo" />
+        <result column="order_type" property="orderType" />
+        <result column="project_id" property="projectId" />
+        <result column="project_name" property="projectName" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="bus_code" property="busCode" />
+        <result column="insure_code" property="insureCode" />
+        <result column="user_id" property="userId" />
+        <result column="user_name" property="userName" />
+        <result column="province_name" property="provinceName" />
+        <result column="province_code" property="provinceCode" />
+        <result column="city_name" property="cityName" />
+        <result column="city_code" property="cityCode" />
+        <result column="area_name" property="areaName" />
+        <result column="area_code" property="areaCode" />
+        <result column="order_source" property="orderSource" />
+        <result column="order_amount" property="orderAmount" />
+        <result column="insurance_amount" property="insuranceAmount" />
+        <result column="fee" property="fee" />
+        <result column="fee_start" property="feeStart" />
+        <result column="fee_end" property="feeEnd" />
+        <result column="limit_start" property="limitStart" />
+        <result column="limit_end" property="limitEnd" />
+        <result column="insure_days" property="insureDays" />
+        <result column="main_org_id" property="mainOrgId" />
+        <result column="main_org_name" property="mainOrgName" />
+        <result column="wf_id" property="wfId" />
+        <result column="input_flag" property="inputFlag" />
+        <result column="reject_flag" property="rejectFlag" />
+        <result column="doc_flag" property="docFlag" />
+        <result column="info_flag" property="infoFlag" />
+        <result column="cur_node_name" property="curNodeName" />
+        <result column="cur_node_code" property="curNodeCode" />
+        <result column="pre_node_name" property="preNodeName" />
+        <result column="pre_node_code" property="preNodeCode" />
+        <result column="step" property="step" />
+        <result column="pay_type" property="payType" />
+        <result column="policy_url" property="policyUrl" />
+        <result column="guarantee_url" property="guaranteeUrl" />
+        <result column="pay_url" property="payUrl" />
+        <result column="policy_no" property="policyNo" />
+        <result column="apply_no" property="applyNo" />
+        <result column="apply_flag" property="applyFlag" />
+        <result column="remark" property="remark" />
+        <result column="broker_name" property="brokerName" />
+        <result column="broker_phone_no" property="brokerPhoneNo" />
+        <result column="op_name" property="opName" />
+        <result column="op_id" property="opId" />
+        <result column="json_other_org" property="jsonOtherOrg" />
+        <result column="pro_info_json" property="proInfoJson" />
+        <result column="status" property="status" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="tender_date" property="tenderDate" />
+        <result column="is_delete" property="isDelete" />
+        <result column="rg_check" property="rgCheck" />
+        <result column="local_policy" property="localPolicy" />
+        <result column="local_guarantee" property="localGuarantee" />
+        <result column="batch_no" property="batchNo" />
+        <result column="surrender_status" property="surrenderStatus" />
+        <result column="policy_date" property="policyDate" />
+        <result column="counter_guarantee" property="counterGuarantee" />
+        <result column="policy_holder_type" property="policyHolderType" />
+        <result column="link_id" property="linkId" />
+        <result column="link_no" property="linkNo" />
+        <result column="link_type" property="linkType" />
+        <result column="pre_order_no" property="preOrderNo" />
+        <result column="tb_code" property="tbCode" />
+        <result column="tb_name" property="tbName" />
+        <result column="bb_code" property="bbCode" />
+        <result column="bb_name" property="bbName" />
+        <result column="special_clause" property="specialClause" />
+        <result column="push_time" property="pushTime" />
+        <result column="push_status" property="pushStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        o_id, order_no, order_type, project_id, project_name, goods_id, goods_name, bus_code, insure_code, user_id, user_name, province_name, province_code, city_name, city_code, area_name, area_code, order_source, order_amount, insurance_amount, fee, fee_start, fee_end, limit_start, limit_end, insure_days, main_org_id, main_org_name, wf_id, input_flag, reject_flag, doc_flag, info_flag, cur_node_name, cur_node_code, pre_node_name, pre_node_code, step, pay_type, policy_url, guarantee_url, pay_url, policy_no, apply_no, apply_flag, remark, broker_name, broker_phone_no, op_name, op_id, json_other_org, pro_info_json, status, create_date, modify_date, tender_date, is_delete, rg_check, local_policy, local_guarantee, batch_no, surrender_status, policy_date, counter_guarantee, policy_holder_type, link_id, link_no, link_type, pre_order_no, tb_code, tb_name, bb_code, bb_name, special_clause, push_time, push_status
+    </sql>
+
+</mapper>
