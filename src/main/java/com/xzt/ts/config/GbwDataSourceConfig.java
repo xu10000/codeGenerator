@@ -51,9 +51,6 @@ public class GbwDataSourceConfig {
         bean.setPlugins(plugins);
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(xmlLocationPath));
 //        MybatisConfiguration configuration = new MybatisConfiguration();
-//        configuration.setJdbcTypeForNull(JdbcType.NULL);
-//        configuration.setMapUnderscoreToCamelCase(true);
-//        configuration.setCacheEnabled(false);
 //        configuration.setLogImpl(StdOutImpl.class);
 //        bean.setConfiguration(configuration);
         //这个的getResources指向的是你的mapper.xml文件，相当于在yml中配置的mapper-locations，此处配置了yml中就不用配置，或者说不会读取yml中的该配置。
