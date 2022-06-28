@@ -2,10 +2,7 @@ package com.xzt.ts.controller.gbw;
 
 
 import com.xzt.ts.service.impl.gbw.OrderInfoServiceImpl;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -26,6 +23,7 @@ public class OrderInfoController {
     public String hello() {
         return orderInfoServiceImpl.hello("xzt");
     }
+
 
 }
 
