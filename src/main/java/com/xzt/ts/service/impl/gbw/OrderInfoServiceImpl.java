@@ -3,6 +3,7 @@ package com.xzt.ts.service.impl.gbw;
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.xzt.ts.entity.gbw.OrderInfo;
 import com.xzt.ts.mapper.gbw.OrderInfoMapper;
 import com.xzt.ts.service.gbw.IOrderInfoService;
@@ -26,6 +27,12 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 //这个一定要放在第一行,否则无法进行分页
         PageHelper.startPage(1,10);
         List<OrderInfo> list = this.list();
+        // 获取条总数
+        // 方法1
+//        PageInfo pageInfo = new PageInfo<>(list);
+//        pageInfo.getTotal();
+//        // 方法2
+//        ((Page) list).getTotal();
         return JSONUtil.toJsonStr(list);
     }
 
